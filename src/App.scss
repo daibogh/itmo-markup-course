@@ -1,0 +1,111 @@
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  font-family: Roboto sans-serif;
+  &Flex {
+    &__Container {
+      min-height: 100vh;
+    }
+    &__Header {
+      font-size: 20px;
+      line-height: 24px;
+      height: 80px;
+      padding: 30px 104px;
+      display: flex;
+      align-items: center;
+      & > div:first-child {
+        margin-right: auto;
+      }
+      box-shadow: inset 0px -1px 0px #D1D2D6;
+    }
+    &__LinksList > ul {
+      display: flex;
+      align-items: center;
+
+      & > * + * {
+        margin-left: 34px;
+      }
+    }
+    &__Link {
+      position: relative;
+      &_active::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #1A1B22;
+        top: calc(100% + 25px);
+      }
+      &_logout {
+        border: 1px solid #1A1B22;
+        border-radius: 100px;
+        padding: 12px 19px;
+        display: flex;
+        align-items: center;
+        & > i {
+          margin-left: 10px;
+          margin-top: auto;
+        }
+      }
+    }
+    &__HeaderContent {
+      padding: 40px 104px;
+      &>*+* {
+        margin-top: 30px;
+      }
+      &Title {
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+
+
+        color: rgba(26, 27, 34, 0.5);
+      }
+      &Message {
+        width: 530px;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 46px;
+        /* or 115% */
+
+
+        /* main/primary */
+
+        color: #1A1B22;
+      }
+      &Description {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+
+
+        color: #1A1B22;
+      }
+    }
+    &__MainContent {
+      padding: 62px 106px;
+      background: #F5F6F7;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      row-gap: 16px;
+      & > * {
+        width: 420px;
+        height: 576px;
+      }
+    }
+  }
+  &Grid {
+
+  }
+
+}
