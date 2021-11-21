@@ -1,13 +1,4 @@
-ul {
-  list-style-type: none;
-}
-a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
-}
-* {
-  box-sizing: border-box;
-}
+@import "./utils.scss";
 .App {
   font-family: Roboto sans-serif;
   &Flex {
@@ -15,16 +6,27 @@ a {
       min-height: 100vh;
     }
     &__Header {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 24px;
+      padding: 16px;
+      @include respond-to(sm) {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 30px 104px;
+      }
       height: 80px;
-      padding: 30px 104px;
       display: flex;
       align-items: center;
       & > div:first-child {
         margin-right: auto;
       }
       box-shadow: inset 0px -1px 0px #D1D2D6;
+    }
+    &__LinksList {
+      display: none;
+      @include respond-to(sm) {
+        display: block;
+      }
     }
     &__LinksList > ul {
       display: flex;
@@ -56,29 +58,41 @@ a {
         }
       }
     }
+    &__Burger {
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
     &__HeaderContent {
-      padding: 40px 104px;
+      padding: 8px 16px 32px 16px;
+      @include respond-to(sm) {
+        padding: 40px 104px;
+      }
       &>*+* {
         margin-top: 30px;
       }
       &Title {
-        font-size: 18px;
+        font-size: 12px;
         line-height: 24px;
+        @include respond-to(sm) {
+          font-size: 18px;
+          line-height: 24px;
+        }
         /* identical to box height, or 133% */
 
 
         color: rgba(26, 27, 34, 0.5);
       }
       &Message {
-        width: 530px;
+        width: 288px;
+        font-size: 30px;
+        line-height: 34px;
+        @include respond-to(sm) {
+          width: 530px;
+          font-size: 40px;
+          line-height: 46px;
+        }
         font-weight: normal;
-        font-size: 40px;
-        line-height: 46px;
-        /* or 115% */
-
-
-        /* main/primary */
-
         color: #1A1B22;
       }
       &Description {
@@ -90,22 +104,164 @@ a {
 
         color: #1A1B22;
       }
+
     }
     &__MainContent {
-      padding: 62px 106px;
       background: #F5F6F7;
       display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+      @include respond-to(sm) {
+        padding: 62px 106px;
+        flex-direction: row;
+      }
       flex-wrap: wrap;
       column-gap: 16px;
       row-gap: 16px;
       & > * {
-        width: 420px;
-        height: 576px;
+        width: 288px;
+        height: 440px;
+        @include respond-to(sm) {
+          width: 420px;
+          height: 576px;
+        }
       }
     }
   }
   &Grid {
+    &__Container {
+      min-height: 100vh;
+    }
+    &__Header {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 16px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      @include respond-to(sm) {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0 104px;
+        grid-template-columns: 1fr 1fr;
+      }
+      height: 80px;
+      & > div:first-child {
+        margin-right: auto;
+      }
+      box-shadow: inset 0px -1px 0px #D1D2D6;
+    }
+    &__LinksList {
+      display: none;
+      @include respond-to(sm) {
+        display: block;
+        width: 600px;
+        justify-self: end;
+      }
+    }
+    &__LinksList > ul {
+      display: grid;
+      align-items: center;
+      margin: 0;
+      grid-template-columns: repeat(3, 1fr);
+      & > * + * {
+        width: 200px;
+      }
+    }
+    &__Link {
+      position: relative;
+      &_active::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #1A1B22;
+        top: calc(100% + 25px);
+      }
+      &_logout {
+        margin-left: auto;
+        border: 1px solid #1A1B22;
+        border-radius: 100px;
+        padding: 12px 19px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 120px;
+        & > i {
+          margin-left: auto;
+          margin-top: auto;
+        }
+      }
+    }
+    &__Burger {
+      margin-left: auto;
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+    &__HeaderContent {
+      padding: 8px 16px 32px 16px;
+      @include respond-to(sm) {
+        padding: 40px 104px;
+      }
+      &>*+* {
+        margin-top: 30px;
+      }
+      &Title {
+        font-size: 12px;
+        line-height: 24px;
+        @include respond-to(sm) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        /* identical to box height, or 133% */
 
+
+        color: rgba(26, 27, 34, 0.5);
+      }
+      &Message {
+        width: 288px;
+        font-size: 30px;
+        line-height: 34px;
+        @include respond-to(sm) {
+          width: 530px;
+          font-size: 40px;
+          line-height: 46px;
+        }
+        font-weight: normal;
+        color: #1A1B22;
+      }
+      &Description {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+
+
+        color: #1A1B22;
+      }
+
+    }
+    &__MainContent {
+      background: #F5F6F7;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 24px 16px;
+      @include respond-to(sm) {
+        padding: 62px 106px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      column-gap: 16px;
+      row-gap: 16px;
+      & > * {
+        width: 288px;
+        height: 440px;
+        @include respond-to(sm) {
+          width: 420px;
+          height: 576px;
+        }
+      }
+    }
   }
 
 }

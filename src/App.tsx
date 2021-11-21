@@ -1,4 +1,5 @@
 import React from 'react';
+import './utils.scss';
 import './App.scss';
 import block from 'bem-cn-lite';
 import cn from 'classnames'
@@ -15,6 +16,7 @@ function App() {
     <div className={b('Container')}>
       <header className={b('Header')}>
         <div className={b('Logo')}>NewsExplorer</div>
+          <i className={cn("fas fa-bars", b('Burger'))}/>
         <nav className={b('LinksList')}>
             <ul>
                 <li><a className={b('Link')} href="#">Главная</a> </li>

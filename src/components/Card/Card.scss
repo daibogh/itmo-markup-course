@@ -1,3 +1,4 @@
+@import "../../utils.scss";
 .Card {
   &Flex {
     &__Container {
@@ -41,6 +42,110 @@
       letter-spacing: 0.4px;
       text-transform: uppercase;
       color: #B6BCBF;
+    }
+    &__Type, &__Delete {
+      position: absolute;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: white;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      /* identical to box height, or 171% */
+
+      text-align: center;
+
+      color: #000000;
+    }
+    &__Type {
+      top: 16px;
+      left: 16px;
+      @include respond-to(sm) {
+        top: 24px;
+        left: 24px;
+      }
+    }
+    &__Delete {
+      top: 16px;
+      right: 16px;
+      @include respond-to(sm) {
+        right: 24px;
+        top: 24px;
+      }
+    }
+  }
+  &Grid {
+    &__Container {
+      display: grid;
+      grid-template-columns: 1fr;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    &__Image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__Info {
+      padding: 20px 24px;
+    }
+    &__Date {
+      font-size: 18px;
+      line-height: 24px;
+      color: #B6BCBF;
+    }
+    &__Title {
+      font-size: 26px;
+      line-height: 30px;
+      color: #1A1B22;
+      margin-top: 12px;
+    }
+    &__Text {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1A1B22;
+    }
+    &__Media {
+      margin-top: 18px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #B6BCBF;
+    }
+    &__Type, &__Delete {
+      position: absolute;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: white;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      /* identical to box height, or 171% */
+
+      text-align: center;
+
+      color: #000000;
+    }
+    &__Type {
+      top: 16px;
+      left: 16px;
+      @include respond-to(sm) {
+        top: 24px;
+        left: 24px;
+      }
+    }
+    &__Delete {
+      top: 16px;
+      right: 16px;
+      @include respond-to(sm) {
+        right: 24px;
+        top: 24px;
+      }
     }
   }
 }

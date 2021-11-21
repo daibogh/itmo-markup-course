@@ -1,7 +1,13 @@
+@import "../../utils.scss";
 .Footer {
   &Flex {
     &__Container {
-      padding: 32px 104px;
+      padding: 20px 16px;
+      flex-direction: column-reverse;
+      @include respond-to(sm) {
+        padding: 32px 104px;
+        flex-direction: row;
+      }
       display: flex;
       justify-content: space-between;
     }
@@ -14,6 +20,80 @@
       display: flex;
       & > * + * {
         margin-left: 15px;
+      }
+    }
+    &__Other, &__Social {
+      display: flex;
+      justify-content: center;
+    }
+    &__Other {
+      width: 70%;
+      flex-direction: column;
+      @include respond-to(sm) {
+        width: auto;
+        flex-direction: row;
+      }
+    }
+    &__Social {
+      width: 30%;
+      justify-content: space-between;
+      @include respond-to(sm) {
+        width: auto;
+        justify-content: center;
+      }
+    }
+  }
+  &Grid {
+    &__Container {
+      padding: 20px 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+      justify-content: space-between;
+      @include respond-to(sm) {
+        padding: 32px 104px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &__Copyright {
+      font-size: 16px;
+      line-height: 22px;
+      color: #B6BCBF;
+    }
+    &__Links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      //& > * + * {
+      //  margin-left: 15px;
+      //}
+    }
+    &__Other, &__Social {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      @include respond-to(sm) {
+        & > *:first-child {
+          justify-self: end;
+          margin-right: 15px;
+        }
+      }
+
+    }
+    &__Other {
+      width: 70%;
+      flex-direction: column;
+      @include respond-to(sm) {
+        width: auto;
+        flex-direction: row;
+      }
+    }
+    &__Social {
+      width: 30%;
+      justify-content: space-between;
+      @include respond-to(sm) {
+        width: auto;
+        justify-content: center;
       }
     }
   }
