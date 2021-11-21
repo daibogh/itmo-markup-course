@@ -21,7 +21,7 @@ function App() {
             <ul>
                 <li><a className={b('Link')} href="#">Главная</a> </li>
                 <li><a className={cn(b('Link'),b('Link', {active: true}))} href="#">Сохраненные статьи</a> </li>
-                <li><a className={cn(b('Link'),b('Link', {logout: true}))} href="#">Грета <i className="fas fa-sign-out-alt"></i></a> </li>
+                <li><a className={cn(b('Link'),b('Link', {logout: true}))} href="#">Грета <i className="fas fa-sign-out-alt" /></a> </li>
             </ul>
         </nav>
       </header>
@@ -32,7 +32,13 @@ function App() {
       </div>
       <Container style={{maxWidth: '100vw'}}>
           <Row className={b('MainContent')}>
-              {blogData.map(({title, type, date, content, media, imgSrc}, idx) => <Col key={idx} xs sm="4"><Card title={title} type={type} content={content} date={date} media={media} imgSrc={imgSrc} /></Col>)}
+              {blogData.map(
+                  ({title, type, date, content, media, imgSrc}, idx) => (
+                      <Col key={idx} xs sm="4">
+                          <Card title={title} type={type} content={content} date={date} media={media} imgSrc={imgSrc} />
+                      </Col>
+                  )
+              )}
           </Row>
           </Container>
         <Footer />
