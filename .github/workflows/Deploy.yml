@@ -27,12 +27,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install
-        run: |
-          yarn install
+        run: yarn install
       - name: typecheck
-          yarn test:typecheck
+        run: yarn test:typecheck
       - name: unit tests
-          yarn test
+        run: yarn test
   deploy:
     needs: test
     runs-on: ubuntu-latest
