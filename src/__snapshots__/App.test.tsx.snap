@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<DocumentFragment>
+  <div
+    class="AppFlex__Container"
+  >
+    <header
+      class="AppFlex__Header"
+    >
+      <div
+        class="AppFlex__Logo"
+      >
+        NewsExplorer
+      </div>
+      <i
+        class="fas fa-bars AppFlex__Burger"
+      />
+      <nav
+        class="AppFlex__LinksList"
+      >
+        <ul>
+          <li>
+            <a
+              class="AppFlex__Link"
+              href="#"
+            >
+              Главная
+            </a>
+             
+          </li>
+          <li>
+            <a
+              class="AppFlex__Link AppFlex__Link AppFlex__Link_active"
+              href="#"
+            >
+              Сохраненные статьи
+            </a>
+             
+          </li>
+          <li>
+            <a
+              class="AppFlex__Link AppFlex__Link AppFlex__Link_logout"
+              href="#"
+            >
+              Грета 
+              <i
+                class="fas fa-sign-out-alt"
+              />
+            </a>
+             
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="AppFlex__HeaderContent"
+    >
+      <div
+        class="AppFlex__HeaderContentTitle"
+      >
+        Сохранённые статьи
+      </div>
+      <div
+        class="AppFlex__HeaderContentMessage"
+      >
+        Грета, у вас 5 сохранённых статей
+      </div>
+      <div
+        class="AppFlex__HeaderContentDescription"
+      >
+        По ключевым словам: 
+        <b>
+          Природа
+        </b>
+        , 
+        <b>
+          Тайга
+        </b>
+         и 
+        <b>
+          2-м другим
+        </b>
+      </div>
+    </div>
+    <div
+      class="container"
+      style="max-width: 100vw;"
+    >
+      <div
+        class="AppFlex__MainContent row"
+      >
+        <div
+          class="col-sm-4 col"
+        >
+          <div
+            class="CardFlex__Container card"
+          >
+            <div
+              class="CardFlex__Type"
+            >
+              Природа
+            </div>
+            <div
+              class="CardFlex__Delete"
+            >
+              <i
+                class="far fa-trash-alt"
+              />
+            </div>
+            <img
+              class="card-img"
+              src="image_01.png"
+            />
+            <div
+              class="CardFlex__Info"
+            >
+              <div
+                class="CardFlex__Date"
+              >
+                2 августа, 2019
+              </div>
+              <div
+                class="CardFlex__Title"
+              >
+                Национальное достояние – парки
+              </div>
+              <div
+                class="CardFlex__Text"
+              >
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </div>
+              <div
+                class="CardFlex__Media"
+              >
+                Дзен
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-4 col"
+        >
+          <div
+            class="CardFlex__Container card"
+          >
+            <div
+              class="CardFlex__Type"
+            >
+              Природа
+            </div>
+            <div
+              class="CardFlex__Delete"
+            >
+              <i
+                class="far fa-trash-alt"
+              />
+            </div>
+            <img
+              class="card-img"
+              src="image_05.png"
+            />
+            <div
+              class="CardFlex__Info"
+            >
+              <div
+                class="CardFlex__Date"
+              >
+                2 августа, 2019
+              </div>
+              <div
+                class="CardFlex__Title"
+              >
+                Лесные огоньки: история одной фотографии
+              </div>
+              <div
+                class="CardFlex__Text"
+              >
+                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
+              </div>
+              <div
+                class="CardFlex__Media"
+              >
+                Афиша
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-4 col"
+        >
+          <div
+            class="CardFlex__Container card"
+          >
+            <div
+              class="CardFlex__Type"
+            >
+              Тайга
+            </div>
+            <div
+              class="CardFlex__Delete"
+            >
+              <i
+                class="far fa-trash-alt"
+              />
+            </div>
+            <img
+              class="card-img"
+              src="image_06.png"
+            />
+            <div
+              class="CardFlex__Info"
+            >
+              <div
+                class="CardFlex__Date"
+              >
+                2 августа, 2019
+              </div>
+              <div
+                class="CardFlex__Title"
+              >
+                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+              </div>
+              <div
+                class="CardFlex__Text"
+              >
+                Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+              </div>
+              <div
+                class="CardFlex__Media"
+              >
+                Медиазона
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-4 col"
+        >
+          <div
+            class="CardFlex__Container card"
+          >
+            <div
+              class="CardFlex__Type"
+            >
+              Природа
+            </div>
+            <div
+              class="CardFlex__Delete"
+            >
+              <i
+                class="far fa-trash-alt"
+              />
+            </div>
+            <img
+              class="card-img"
+              src="image_01.png"
+            />
+            <div
+              class="CardFlex__Info"
+            >
+              <div
+                class="CardFlex__Date"
+              >
+                2 августа, 2019
+              </div>
+              <div
+                class="CardFlex__Title"
+              >
+                Национальное достояние – парки
+              </div>
+              <div
+                class="CardFlex__Text"
+              >
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </div>
+              <div
+                class="CardFlex__Media"
+              >
+                Дзен
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-4 col"
+        >
+          <div
+            class="CardFlex__Container card"
+          >
+            <div
+              class="CardFlex__Type"
+            >
+              Природа
+            </div>
+            <div
+              class="CardFlex__Delete"
+            >
+              <i
+                class="far fa-trash-alt"
+              />
+            </div>
+            <img
+              class="card-img"
+              src="image_05.png"
+            />
+            <div
+              class="CardFlex__Info"
+            >
+              <div
+                class="CardFlex__Date"
+              >
+                2 августа, 2019
+              </div>
+              <div
+                class="CardFlex__Title"
+              >
+                Лесные огоньки: история одной фотографии
+              </div>
+              <div
+                class="CardFlex__Text"
+              >
+                Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
+              </div>
+              <div
+                class="CardFlex__Media"
+              >
+                Афиша
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="FooterFlex__Container"
+    >
+      <div
+        class="FooterFlex__Copyright"
+      >
+        © 2020 Supersite, Powered by News API
+      </div>
+      <div
+        class="FooterFlex__Links"
+      >
+        <div
+          class="FooterFlex__Other"
+        >
+          <div>
+            Главная
+          </div>
+          <div>
+            Яндекс.Практикум
+          </div>
+        </div>
+        <div
+          class="FooterFlex__Social"
+        >
+          <i
+            class="fab fa-github"
+          />
+          <i
+            class="fab fa-facebook-square"
+          />
+        </div>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

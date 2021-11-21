@@ -7,7 +7,7 @@ import 'normalize.css'
 import {useBlogData} from "./hooks/use-blog-data";
 import {Card} from "./components/Card/Card";
 import {Footer} from "./components/Footer/Footer";
-
+import {Container, Row, Col} from 'react-bootstrap'
 const b = block(`App${process.env.REACT_APP_LAYOUT_MODE === 'grid' ? 'Grid': 'Flex'}`);
 
 function App() {
@@ -30,9 +30,11 @@ function App() {
           <div className={b('HeaderContentMessage')}>Грета, у вас 5 сохранённых статей</div>
           <div className={b('HeaderContentDescription')}>По ключевым словам: <b>Природа</b>, <b>Тайга</b> и <b>2-м другим</b></div>
       </div>
-      <main className={b('MainContent')}>
-          {blogData.map(({title, type, date, content, media, imgSrc}, idx) => <Card key={idx} title={title} type={type} content={content} date={date} media={media} imgSrc={imgSrc} />)}
-      </main>
+      <Container style={{maxWidth: '100vw'}}>
+          <Row className={b('MainContent')}>
+              {blogData.map(({title, type, date, content, media, imgSrc}, idx) => <Col key={idx} xs sm="4"><Card title={title} type={type} content={content} date={date} media={media} imgSrc={imgSrc} /></Col>)}
+          </Row>
+          </Container>
         <Footer />
     </div>
   );
